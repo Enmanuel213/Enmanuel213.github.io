@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZoneSport - Inicio</title>
+    <link rel="stylesheet" href="hola.css">
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+<!-- Barra de navegación -->
+<!-- Barra de navegación -->
+<nav class="navbar">
+    <div class="logo">
+        <a href="inicio.html">ZoneSport</a>
+    </div>
+    <ul class="menu">
+        <li><a class="boton" href="inicio.html">Inicio</a></li>
+        <li><a class="boton" href="deportista.html">Deportista</a></li>
+        <li><a class="boton" href="noticias.html">Noticias</a></li>
+        <li><a class="boton" href="acercade.html">Acerca de</a></li>
+    </ul>
+</nav>
+
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <div class="slider">
+            <div class="slide">
+                <img src="5XNODK6IJZHCVKMX2Z547BTH4Y.avif" alt="Dodgers">
+                <div class="content">
+                    <h2>Los Dodgers ganan el campeonato</h2>
+                    <a href="noticias.html#dodgers" class="read-more">Leer más</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="maxresdefault.jpg" alt="Fernando Tatis Jr.">
+                <div class="content">
+                    <h2>Fernando Tatis Jr. brilla en el campo</h2>
+                    <a href="noticias.html#Fernando" class="read-more">Leer más</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="R.jpeg" alt="Juan Soto">
+                <div class="content">
+                    <h2>Juan Soto firma contrato récord</h2>
+                    <a href="noticias.html#juansoto" class="read-more">Leer más</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="OIP (1).jpeg" alt="Stephen Curry">
+                <div class="content">
+                    <h2>Stephen Curry rompe la barrera de los 25.000 puntos</h2>
+                    <a href="noticias.html#stephen" class="read-more">Leer más</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botones de navegación del Slider -->
+        <button class="arrow prev" onclick="prevSlide()">&#10094;</button>
+        <button class="arrow next" onclick="nextSlide()">&#10095;</button>
+
+        <!-- Indicadores del Slider -->
+        <div class="dots">
+            <span class="dot" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
+        </div>
+    </div>
+
+    <script src="hola.js"></script>
+</body>
+</html>
