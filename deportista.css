@@ -1,0 +1,162 @@
+html, body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* =================== NAVEGACIÓN =================== */
+nav {
+    position: fixed; /* Hace que la barra permanezca siempre visible */
+    top: 0;
+    width: 100%;
+    padding: 15px;
+    background-color: #004080; /* Fondo azul oscuro */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+   
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centra los elementos de la barra */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Texto en blanco */
+    font-weight: bold;
+    padding: 12px 24px; /* Ajuste en el espaciado */
+    font-size: 18px; /* Tamaño de letra más legible */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 10px; /* Bordes suaves */
+}
+
+nav ul li a:hover {
+    background-color: #ffcc00; /* Fondo amarillo al pasar el cursor */
+    color: #004080; /* Texto azul oscuro */
+    border-radius: 20px;
+}
+
+/* Estilo para el logo ZoneSport */
+.logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo a {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #ffcc00;
+}
+
+/* =================== SECCIÓN DEPORTISTAS =================== */
+.deportistas {
+    padding: 80px 20px 50px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.deportistas h1 {
+    color: #004080;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* =================== TARJETAS =================== */
+.card {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Imagen opaca al pasar el mouse */
+.card:hover img {
+    opacity: 0.25;
+    transform: scale(1.05);
+}
+
+/* Contenido centrado */
+.card .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-y: auto;
+}
+
+/* Mostrar contenido al hacer hover */
+.card:hover .content {
+    opacity: 1;
+}
+
+.card .content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.card .content p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 240px;
+    word-wrap: break-word;
+}

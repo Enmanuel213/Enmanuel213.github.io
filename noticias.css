@@ -1,0 +1,176 @@
+html, body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Ocupa toda la pantalla */
+}
+
+/* =================== NAVEGACIÓN =================== */
+nav {
+    position: fixed; /* Hace que la barra permanezca siempre visible */
+    top: 0;
+    width: 100%;
+    padding: 15px;
+    background-color: #004080; /* Fondo azul oscuro */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+    
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centra los elementos de la barra */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Texto en blanco */
+    font-weight: bold;
+    padding: 12px 24px; /* Ajuste en el espaciado */
+    font-size: 18px; /* Tamaño de letra más legible */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 10px; /* Bordes suaves */
+}
+
+nav ul li a:hover {
+    background-color: #ffcc00; /* Fondo amarillo al pasar el cursor */
+    color: #004080; /* Texto azul oscuro */
+    border-radius: 20px;
+}
+
+/* Estilo para el logo ZoneSport */
+.logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo a {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #ffcc00;
+}
+
+/* =================== SECCIÓN DE NOTICIAS =================== */
+
+.titulo {
+    color: #004080;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.noticias {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+/* Contenedor de cada noticia */
+.noticia {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Asegura que la noticia ocupe el ancho completo */
+    max-width: 1200px; /* Define un tamaño máximo */
+    margin: 0 auto; /* Centra las noticias */
+}
+
+/* Imagen de la noticia */
+.noticia img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+}
+
+/* Contenedor del texto */
+.noticia .contenido {
+    padding: 20px;
+    flex: 1;
+    min-width: 300px; /* Evita que el contenido se reduzca demasiado */
+}
+
+/* Título de la noticia */
+.noticia h2 {
+    color: #004080;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Texto de la noticia */
+.noticia p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #333333;
+}
+
+/* Botón de leer más */
+.noticia .read-more:hover {
+    background-color: #ffcc00;
+    color: #004080;
+}
+
+/* Efecto al pasar el mouse */
+.noticia:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* =================== ENLACES DE NOTICIAS =================== */
+/* =================== ENLACES DE NOTICIAS =================== */
+.noticia .read-more {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    color: white; /* Texto en blanco */
+    background-color: #004080; /* Azul oscuro para destacar */
+    padding: 12px 22px; /* Espaciado más amplio */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Animación suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 200px; /* Limita el tamaño del botón */
+    margin: 15px auto; /* Centra el botón */
+}
+
+/* Efecto al pasar el mouse */
+.noticia .read-more:hover {
+    background-color: #ffcc00; /* Cambio de color a amarillo */
+    color: #004080; /* Texto azul oscuro */
+    transform: scale(1.1); /* Ligero aumento de tamaño */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
